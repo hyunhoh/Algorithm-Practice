@@ -4,8 +4,8 @@ function solution(n) {
     
     while(fac <= n) {
         int++;
-        fac = int * fac;
+        fac *= int;
     }
     
-    return int-1;
+    return int - 1;
 }
