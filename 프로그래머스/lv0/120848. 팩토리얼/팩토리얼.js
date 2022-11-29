@@ -1,11 +1,11 @@
 function solution(n) {
-    let integer = 1;
-    let factorial = 1;
+    let int = 1;
+    let fac = 1;
     
-    while(factorial <= n) {
-        integer++;
-        factorial = integer * factorial;
+    while(fac <= n) {
+        int++;
+        fac = int * fac;
     }
     
-    return integer-1;
+    return int-1;
 }
