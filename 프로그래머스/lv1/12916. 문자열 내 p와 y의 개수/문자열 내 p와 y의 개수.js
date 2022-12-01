@@ -10,5 +10,5 @@ function solution(s){
         return acc;
     }, {p:0,y:0})
     
-    return obj.p === obj.y ? true : false;
+    return obj.p === obj.y;
 }
