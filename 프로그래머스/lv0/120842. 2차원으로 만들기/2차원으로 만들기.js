@@ -1,9 +1,10 @@
 function solution(num_list, n) {
-    let result = [];
-    
-    for(i=0; i<num_list.length; i+=n) {
-        result.push(num_list.slice(i, i+n))
-    }
-    
-    return result;
+    return num_list.reduce((acc, cur, idx) => {
+        if(idx === n) {
+            let arr = [cur];
+            return [...acc, arr];
+        }
+        acc[acc.length-1].push(cur);
+        return acc;
+    }, [])
 }
