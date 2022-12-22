@@ -1,6 +1,6 @@
 function solution(A,B){
-    let a = A.sort((a,b) => a-b);
-    let b = B.sort((a,b) => b-a);
+    A.sort((a,b) => a-b);
+    B.sort((a,b) => b-a);
     
-    return a.reduce((acc, cur, idx) => acc + cur * b[idx],0)
+    return A.reduce((acc, cur, idx) => acc + cur * B[idx],0)
 }
