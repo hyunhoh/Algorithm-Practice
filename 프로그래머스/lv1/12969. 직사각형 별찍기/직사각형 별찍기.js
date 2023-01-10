@@ -14,6 +14,5 @@ process.stdin.on('data', data => {
         result = result + row + '\n';
     }
     
-    console.log(result)
-    return result;
+    console.log(result);
 });
