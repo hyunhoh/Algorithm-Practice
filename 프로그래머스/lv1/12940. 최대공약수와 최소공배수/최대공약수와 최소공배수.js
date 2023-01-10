@@ -2,17 +2,17 @@ function solution(n, m) {
     const max = Math.max(n, m);
     const min = Math.min(n, m);
     
-    let a = min;
+    let GCD = min;
     
-    while(max % a !== 0 || min % a !== 0) {
-        a--;
+    while(max % GCD !== 0 || min % GCD !== 0) {
+        GCD--;
     }
     
-    let b = max;
+    let LCM = max;
     
-    while(b % max !== 0 || b % min !== 0) {
-        b++;
+    while(LCM % max !== 0 || LCM % min !== 0) {
+        LCM++;
     }
     
-    return [a, b];
+    return [GCD, LCM];
 }
