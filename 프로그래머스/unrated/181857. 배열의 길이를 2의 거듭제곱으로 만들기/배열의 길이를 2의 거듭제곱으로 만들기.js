@@ -5,5 +5,5 @@ function solution(arr) {
         length *= 2;
     }
     
-    return length === arr.length ? arr : [...arr, ...Array(length - arr.length).fill(0)]
+    return [...arr, ...Array(length - arr.length).fill(0)]
 }
