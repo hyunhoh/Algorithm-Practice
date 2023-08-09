@@ -4,11 +4,10 @@ function solution(n) {
     while(n > 1) {
         if(n % 2) {
             n = 3 * n + 1;
-            result.push(n);
         } else {
             n = n / 2;
-            result.push(n);
         }
+        result.push(n);
     }
     
     return result;
