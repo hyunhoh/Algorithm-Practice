@@ -5,7 +5,7 @@
 var isValid = function(s) {
     const stack = [];
 
-    if(s.length % 2) return false;
+    // if(s.length % 2) return false;
 
     for(l of s) {
         if(l === '(' || l === '[' || l === '{') {
@@ -22,5 +22,5 @@ var isValid = function(s) {
         }
     }
 
-    return !stack.length
+    return !stack.length;
 };
