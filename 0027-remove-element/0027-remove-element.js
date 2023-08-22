@@ -8,7 +8,7 @@ var removeElement = function(nums, val) {
 
     for(let i = 0; i<nums.length; i++) {
         if(nums[i] !== val) {
-            nums[k] = nums[i]
+            nums[k] = nums[i];
             k++;
         }
     }
