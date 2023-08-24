@@ -3,5 +3,5 @@
  * @return {number[]}
  */
 var plusOne = function(digits) {
-    return [...String((BigInt(digits.join(''))+BigInt(1)))]
+    return [...(BigInt(digits.join(''))+BigInt(1)) + '']
 };
