@@ -4,11 +4,13 @@
  * @return {number}
  */
 var numJewelsInStones = function(jewels, stones) {
-    let count = 0;
+    // let count = 0;
 
-    for(let char of stones) {
-        if(jewels.includes(char)) count++
-    }
+    // for(let char of stones) {
+    //     if(jewels.includes(char)) count++
+    // }
 
-    return count;
+    // return count;
+
+    return [...stones].reduce((acc, cur) => jewels.includes(cur) ? acc + 1 : acc, 0)
 };
