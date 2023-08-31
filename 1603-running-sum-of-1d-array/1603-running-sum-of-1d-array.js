@@ -3,13 +3,13 @@
  * @return {number[]}
  */
 var runningSum = function(nums) {
-    return nums.map((e, i) => {
-        let sum = 0;
+    const output = [];
 
-        for(let j=0; j<=i; j++) {
-            sum += nums[j];
-        }
+    output[0] = nums[0];
 
-        return sum;
-    })
+    for(let i=1; i<nums.length; i++) {
+        output[i] = output[i-1] + nums[i];
+    }
+
+    return output;
 };
