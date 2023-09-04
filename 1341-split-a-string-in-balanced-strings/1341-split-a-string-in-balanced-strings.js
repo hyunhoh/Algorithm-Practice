@@ -3,18 +3,15 @@
  * @return {number}
  */
 var balancedStringSplit = function(s) {
-    // R이나 L 개수가 늘어난 만큼 R 이나 L 개수가 늘어나면 split이 가능하다.
     let count = 0;
-    let r = 0;
-    let l = 0;
+    let balance = 0;
 
     for(char of s) {
-        if(char === 'R') r++;
-        if(char === 'L') l++;
-        if(r === l) {
+        if(char === 'R') balance++;
+        if(char === 'L') balance--;
+        if(balance === 0) {
             count++;
-            r = 0;
-            l = 0;
+            balance = 0;
         }
     }
 
