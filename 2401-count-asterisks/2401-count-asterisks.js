@@ -7,9 +7,7 @@ var countAsterisks = function(s) {
     let count = 0;
 
     for(char of s) {
-        if(char === '|') {
-            pair = !pair
-        }
+        if(char === '|') pair = !pair
         if(pair) {
             if(char === '*') count++;
         }
