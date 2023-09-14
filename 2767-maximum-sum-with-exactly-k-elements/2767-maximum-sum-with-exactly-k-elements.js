@@ -4,12 +4,12 @@
  * @return {number}
  */
 var maximizeSum = function(nums, k) {
+  let max = Math.max(...nums)
   let sum = 0;
 
   for(let i=0; i<k; i++) {
-    sum += Math.max(...nums);
-    nums.push(Math.max(...nums) + 1)
+    sum += max + i;
   }
 
-  return sum;
+  return sum
 };
