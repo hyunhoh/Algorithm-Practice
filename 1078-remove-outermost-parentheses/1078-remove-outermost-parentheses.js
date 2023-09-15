@@ -9,7 +9,7 @@ var removeOuterParentheses = function(s) {
   for(char of s) {
     if(char === '(') {
       stack.push('(')
-      if(stack.length > 1) {
+      if(stack.length !== 1) {
         result += '('
       }
     } else {
