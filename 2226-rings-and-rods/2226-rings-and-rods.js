@@ -3,23 +3,17 @@
  * @return {number}
  */
 var countPoints = function(rings) {
-    const hash = {};
+    const rods = '0123456789'
 
-    for(let i=0; i<rings.length; i+=2) {
-        if(hash[rings[i+1]]) {
-            hash[rings[i+1]] += rings[i];
-        } else {
-            hash[rings[i+1]] = rings[i]
+    let count = 0;
+
+    for(rod of rods) {
+        if(rings.includes(`B${rod}`) &&
+        rings.includes(`G${rod}`) &&
+        rings.includes(`R${rod}`)) {
+            count++;
         }
     }
 
-    let result = 0;
-
-    for(key in hash) {
-        if(hash[key].includes('B') && hash[key].includes('R') && hash[key].includes('G')) {
-            result++
-        }
-    }
-
-    return result;
+    return count
 };
