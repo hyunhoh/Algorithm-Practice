@@ -7,7 +7,7 @@ var pivotInteger = function(n) {
 
     while(x <= n) {
         if((x ** 2 * 2) === (n ** 2 + n)) return x
-        x++
+        else x++
     }
 
     return -1
