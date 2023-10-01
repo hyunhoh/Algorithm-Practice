@@ -4,5 +4,5 @@
  * @return {number}
  */
 var findDelayedArrivalTime = function(arrivalTime, delayedTime) {
-    return arrivalTime + delayedTime >= 24 ? arrivalTime + delayedTime - 24 : arrivalTime + delayedTime
+    return (arrivalTime + delayedTime) % 24
 };
