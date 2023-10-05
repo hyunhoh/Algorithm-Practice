@@ -8,7 +8,9 @@ var firstPalindrome = function(words) {
             if(word[i] !== word[j]) {
                 break
             }
-            if(i >= j) return word
+            if(i >= j) {
+                return word
+            }
         }
     }
 
