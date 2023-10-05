@@ -9,8 +9,9 @@ var minOperations = function(nums) {
         if(nums[i] > nums[i-1]) {
             continue
         } else {
-            count += nums[i-1] - nums[i] + 1
-            nums[i] = nums[i-1] + 1
+            const change = nums[i-1] - nums[i] + 1
+            count += change
+            nums[i] += change
         }
     }
 
