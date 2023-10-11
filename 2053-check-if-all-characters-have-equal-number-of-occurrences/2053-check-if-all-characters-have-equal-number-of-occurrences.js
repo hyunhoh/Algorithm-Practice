@@ -9,10 +9,10 @@ var areOccurrencesEqual = function(s) {
         hash[char] ? hash[char] += 1 : hash[char] = 1
     }
 
-    const values = Object.values(hash)
+    const val = hash[s[0]]
 
-    for(let i=0; i<values.length-1; i++) {
-        if(values[i] !== values[i+1]) return false
+    for(key in hash) {
+        if(val !== hash[key]) return false
     }
 
     return true
