@@ -9,11 +9,11 @@ var minDeletionSize = function(strs) {
         let prev = 0
 
         for(let str of strs) {
-            if(str.charCodeAt(i) >= prev) {
-                prev = str.charCodeAt(i)
-            } else {
-                count += 1
+            if(str.charCodeAt(i) < prev) {
+                count++
                 break
+            } else {
+                prev = str.charCodeAt(i)
             }
         }
     }
