@@ -3,5 +3,15 @@
  * @return {number}
  */
 var fib = function(n) {
-    return n === 0 || n === 1 ? n : fib(n-1) + fib(n-2)
+    const seq = [0, 1]
+
+    if(n === 0 || n === 1) {
+        return seq[n]
+    }
+
+    for(let i=2; i<=n; i++) {
+        seq.push(seq[i-1] + seq[i-2])
+    }
+
+    return seq[seq.length-1]
 };
